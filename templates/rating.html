@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+    <head>
+
+        <html lang="en" dir="ltr">
+        <meta charset="utf-8">
+        <title>Next Watch: Rating</title>
+        <link rel="icon" href="favicon.ico" title="MR">
+
+        <style type="text/css">
+
+           body
+           {
+             background-image: linear-gradient(to right, black,black,#5eab8c,red,#290103);
+             border: 3px solid white;
+             margin: 20px 20px 60px 20px;
+
+           }
+
+           .btn
+           {
+             color: red;
+             background-color: white ;
+             border: 3px solid black;
+             font-family:Courier New;
+             margin: -20px -50px;
+             position:relative;
+           }
+
+           .font
+           {
+             font-family: Courier New;
+             color: white;
+             font-size:5;
+             text-align: center;
+             font-weight:bold;
+           }
+
+           .footer
+           {
+             position: fixed;
+             left: 0;
+             bottom: 0;
+             width: 100%;
+             background-color: #242423;
+             color: white;
+             text-align: center;
+             font-family:Courier New;
+             font-style: bold;
+             font-size:14px;
+           }
+
+           .wrapper-class input[type="radio"]
+           {
+              width: 15px;
+           }
+
+          .wrapper-class label
+          {
+              display: inline;
+              margin-left: 5px;
+           }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        {% extends "template.html" %}
+        {% block content %}
+        <h1 class = "font">RATE EACH OF THESE GENRE BASED ON YOUR PREFERENCES</h1>
+        <br>
+        <h3 class = "font">0: I hate this genre! &nbsp; &nbsp; &nbsp; &nbsp;5:That's my favourite genre!</h3></td>
+        <br>
+        <form action="{{ url_for('recommendation') }}" method="POST">
+
+          <div class = "font wrapper-class">
+          <p>What is your rating to <strong>ACTION</strong> genre? (Example: Die Hard, Mission Impossible)</p>
+
+                 <input type="radio" name="Action" value="0" checked> 0
+                 <input type="radio" name="Action" value="1"> 1
+                 <input type="radio" name="Action" value="2"> 2
+                 <input type="radio" name="Action" value="3"> 3
+                 <input type="radio" name="Action" value="4"> 4
+                 <input type="radio" name="Action" value="5"> 5
+
+
+            <br>
+            <div class = "font wrapper-class">
+            <p>What is your rating to <strong>ANIMATION</strong> genre? (Example: Toy Story)</p>
+
+                   <input type="radio" name="Animation" value="0" checked> 0
+                   <input type="radio" name="Animation" value="1"> 1
+                   <input type="radio" name="Animation" value="2"> 2
+                   <input type="radio" name="Animation" value="3"> 3
+                   <input type="radio" name="Animation" value="4"> 4
+                   <input type="radio" name="Animation" value="5"> 5
+
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+            <p>What is your rating to <strong>Children's</strong> genre? (Example: Alice in Wonderland) </p>
+
+                <input type="radio" name="Children" value="0" checked> 0
+                <input type="radio" name="Children" value="1"> 1
+                <input type="radio" name="Children" value="2"> 2
+                <input type="radio" name="Children" value="3"> 3
+                <input type="radio" name="Children" value="4"> 4
+                <input type="radio" name="Children" value="5"> 5
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+             <p>What is your rating to <strong>COMEDY</strong> genre? (Example: Dumb and Dumber, Grown Ups)</p>
+
+                    <input type="radio" name="Comedy" value="0" checked> 0
+                    <input type="radio" name="Comedy" value="1"> 1
+                    <input type="radio" name="Comedy" value="2"> 2
+                    <input type="radio" name="Comedy" value="3"> 3
+                    <input type="radio" name="Comedy" value="4"> 4
+                    <input type="radio" name="Comedy" value="5"> 5
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+            <p>What is your rating to <strong>CRIME</strong> genre? (Example: Goodfellas)</p>
+
+                   <input type="radio" name="Crime" value="0" checked> 0
+                   <input type="radio" name="Crime" value="1"> 1
+                   <input type="radio" name="Crime" value="2"> 2
+                   <input type="radio" name="Crime" value="3"> 3
+                   <input type="radio" name="Crime" value="4"> 4
+                   <input type="radio" name="Crime" value="5"> 5
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+            <p>What is your rating to <Strong>DOCUMENTARY</Strong> genre? (Example: The Decline of Western Civilizations)</p>
+
+                   <input type="radio" name="Documentary" value="0" checked> 0
+                   <input type="radio" name="Documentary" value="1"> 1
+                   <input type="radio" name="Documentary" value="2"> 2
+                   <input type="radio" name="Documentary" value="3"> 3
+                   <input type="radio" name="Documentary" value="4"> 4
+                   <input type="radio" name="Documentary" value="5"> 5
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+            <p>What is your rating to <strong>DRAMA</strong> genre? (Example: The Godfather)</p>
+
+                   <input type="radio" name="Drama" value="0" checked> 0
+                   <input type="radio" name="Drama" value="1"> 1
+                   <input type="radio" name="Drama" value="2"> 2
+                   <input type="radio" name="Drama" value="3"> 3
+                   <input type="radio" name="Drama" value="4"> 4
+                   <input type="radio" name="Drama" value="5"> 5
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+            <p>What is your rating to <strong>FANTASY</strong> genre? (Example: Harry Potter, The Lord of the Rings)</p>
+
+                   <input type="radio" name="Fantasy" value="0" checked> 0
+                   <input type="radio" name="Fantasy" value="1"> 1
+                   <input type="radio" name="Fantasy" value="2"> 2
+                   <input type="radio" name="Fantasy" value="3"> 3
+                   <input type="radio" name="Fantasy" value="4"> 4
+                   <input type="radio" name="Fantasy" value="5"> 5
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+             <p>What is your rating to <strong>HORROR</strong> genre? (Example: Ring, The Shining)</p>
+
+                    <input type="radio" name="Horror" value="0" checked> 0
+                    <input type="radio" name="Horror" value="1"> 1
+                    <input type="radio" name="Horror" value="2"> 2
+                    <input type="radio" name="Horror" value="3"> 3
+                    <input type="radio" name="Horror" value="4"> 4
+                    <input type="radio" name="Horror" value="5"> 5
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+             <p>What is your rating to <strong>MYSTERY</strong> genre? (Example: Knives Out, Memento)</p>
+
+                    <input type="radio" name="Mystery" value="0" checked> 0
+                    <input type="radio" name="Mystery" value="1"> 1
+                    <input type="radio" name="Mystery" value="2"> 2
+                    <input type="radio" name="Mystery" value="3"> 3
+                    <input type="radio" name="Mystery" value="4"> 4
+                    <input type="radio" name="Mystery" value="5"> 5
+            </div>
+
+            <br>
+            <div class = "font wrapper-class">
+            <p>What is your rating to <strong>ROMANCE</strong> genre? (Example: Crazy Rich Asian, The Notebook)</p>
+
+                   <input type="radio" name="Romance" value="0" checked> 0
+                   <input type="radio" name="Romance" value="1"> 1
+                   <input type="radio" name="Romance" value="2"> 2
+                   <input type="radio" name="Romance" value="3"> 3
+                   <input type="radio" name="Romance" value="4"> 4
+                   <input type="radio" name="Romance" value="5"> 5
+            </div>
+
+
+          <br>
+          <div class = "font wrapper-class">
+          <p> What is your rating to <strong>Sci-Fi </strong>genre? (Example: The Avengers, Star Wars)</p>
+
+            <input type="radio" name="SciFi" value="0" checked> 0
+            <input type="radio" name="SciFi" value="1" > 1
+            <input type="radio" name="SciFi" value="2"> 2
+            <input type="radio" name="SciFi" value="3"> 3
+            <input type="radio" name="SciFi" value="4"> 4
+            <input type="radio" name="SciFi" value="5"> 5
+          </div>
+
+            <br>
+            <div class = "font wrapper-class">
+            <p>What is your rating to <strong>THRILLER</strong> genre? (Example: Tenet, Seven) </p>
+
+                       <input type="radio" name="Thriller" value="0" checked>
+                       <input type="radio" name="Thriller" value="1"> 1
+                       <input type="radio" name="Thriller" value="2"> 2
+                       <input type="radio" name="Thriller" value="3"> 3
+                       <input type="radio" name="Thriller" value="4"> 4
+                       <input type="radio" name="Thriller" value="5"> 5
+            </div>
+
+            <br><br><br>
+            <div>
+                  <h2 class = "font"><strong>IF YOU ARE SURE ABOUT THESE RATINGS CLICK THE BUTTON TO GET YOUR RECCOMENDATIONS!</strong></h3>
+            </div>
+            <div class="pos">
+              <button type="submit" class="btn btn-success"><strong>Get Recommendations!</strong></button>
+              <br><br><br><br>
+            </div>
+
+        </form>
+        <footer class="footer">
+            <p>S. HARSHAAVARDHINI 18BLC1053</p>
+        </footer>
+        {% endblock %}
+    </body>
+</html>

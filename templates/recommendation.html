@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <head>
+        <html lang="en" dir="ltr">
+        <meta charset="utf-8">
+        <title> Next Watch: Recommendations</title>
+        <link rel="icon" href="favicon.ico" title="MR">
+        <style type="text/css">
+
+          body
+          {
+            background: url("https://mla71jejopuh.i.optimole.com/du5H_Ws-jX5aFdMO/w:auto/h:auto/q:auto/https://narocinema.com/wp-content/uploads/2017/08/slate.jpg");
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            background-color:#290103;
+            }
+
+          h1
+          {
+            font-family:Courier New;
+            font-size: 40px;
+            color:white;
+            text-align:center;
+          }
+
+          p
+          {
+            position: relative;
+            text-align:center;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .tbl
+          {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+          }
+
+         .tbl .content
+         {
+             margin: 5% auto auto auto;
+             position: center;
+             bottom: 0;
+             background: black; /* Fallback color */
+             background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+             color: #f1f1f1;
+             width: 100%;
+             font-family: Courier New;
+             font-size:17px;
+             height:70%
+             padding: 30%;
+             border:solid black 1px;
+             text-align: center;
+          }
+
+          .hov:hover
+          {
+            transform: scale(1.03);
+          }
+
+        </style>
+
+    </head>
+
+    <body>
+        {% extends "template.html" %}
+        {% block content %}
+          <div class = "tbl  hov">
+            <div class = "content">
+              <h1 class = "hov">Here are your top 20 recommendations!</h1>
+              <p>
+                <table align="center" class = "hov" >
+                   <tr>
+                     <td>
+                       <strong>{{ table }}</strong>
+                     </td>
+                   </tr>
+                </table>
+              </p>
+            </div>
+          </div>
+
+        {% endblock %}
+    </body>
+</html>

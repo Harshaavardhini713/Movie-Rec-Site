@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+    <head>
+        <html lang="en" dir="ltr">
+        <meta charset="utf-8">
+        <style type="text/css">
+
+	        body
+  	      {
+	          margin: 20px;
+	          background: url("https://i.pinimg.com/originals/b5/62/bb/b562bbd5afea00093e7d0b0e06037b68.jpg");
+            height: 500px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            background-color:#290103;
+          }
+
+          p:hover
+          {
+            transform: scale(1.2);
+          }
+
+          .hd
+          {
+            border: 5px solid black;
+            text-align:center;
+            font-family:Courier New;
+            font-size:40px;
+            margin:0 40% 0 40%;
+            padding:10px;
+            color: black;
+            text-decoration:none;
+          }
+
+          .hd:hover
+          {
+            transform: scale(1.2);
+            color: #b52b21;
+            border: 5px solid #b52b21;
+          }
+
+          .banner
+          {
+            margin:150px 200px 60px 200px;
+            text-align:center;
+            background-repeat:no-repeat;
+            font-size:24px;
+            color: white;
+            font-family:Courier New;
+            text-decoration:none;
+          }
+
+          .btn
+          {
+            background-color: #b52b21;
+            font-family:Courier New;
+            color: black;
+            font-size:20px;
+            border: 3px solid black;
+            text-align: center;
+            position: center;
+          }
+
+          .btn:hover
+          {
+            background-color: white;
+            font-family:Courier New;
+            color: #b52b21;
+            font-size:20px;
+            border: 3px solid black;
+            transform: scale(1.1);
+          }
+
+          .footer
+          {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #242423;
+            color: white;
+            text-align: center;
+            font-family:Courier New;
+            font-style: bold;
+            font-size:14px;
+          }
+
+	    </style>
+      <title>Next Watch</title>
+      <link rel="icon" href="favicon.ico" title="MR">
+
+    </head>
+
+    {% extends "template.html" %}
+    {% block content %}
+
+    <body>
+
+        <h1 class = "hd" >NEXT WATCH</h1>
+	       <div class="banner">
+	        <form action="{{ url_for('rating') }}" method="GET">
+	     	   	<p>What should I watch next? A question almost everybody in the present world has wondered at a point of time. And this system is a solution to this first world problem. The idea is you (the user) rate several pre-defined genres based on your taste and then receive a recommendation list containing the movies  that you'll most probably like!</p>
+            <br>
+            <br>
+            <button type="submit" class="btn"><strong>Recommend me some movies!</strong></button>
+          </form>
+	   		</div>
+
+        <div class="footer">
+            <p>S. HARSHAAVARDHINI 18BLC1053</p>
+        </div>
+
+	  </body>
+
+  {% endblock %}
+
+</html>
